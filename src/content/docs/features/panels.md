@@ -1,85 +1,85 @@
 ---
 title: Panels
-description: Create and manage groups of research participants to use across your Peppermint studies.
+description: Create and manage groups of screened research participants to use across your Peppermint studies.
 ---
 
 ## Overview
 
-Panels are saved groups of research participants that you can recruit from when running studies in Peppermint. Instead of building a new participant list each time, you create a panel once and reuse it across multiple studies. Use panels to organise participants by role, product area, customer segment, or any grouping that fits your research workflow.
+Panels are saved groups of research participants that you build once and reuse across studies. Each panel holds a pool of qualified respondents — vetted through screener questions, sourced from a previous study, or imported from your own contacts. Use panels to run consistent research with the right people without rebuilding your participant list each time.
 
 ## Before You Start
 
-- You need a Peppermint account with access to the Panels section.
-- If you plan to add existing participants to a panel, make sure those participants have already been added to your workspace.
+- You need a Peppermint account with access to the **Panels** section.
+- If you plan to use **Use an existing panel** as your source, make sure you have at least one previous study or saved panel in your workspace.
 
 ## How It Works
 
 ### Creating a Panel
 
-1. From the main navigation, click **Panels**.
+1. Click **Panels** in the left navigation.
 
-2. Click **Create panel**.
+2. Click **+ Create**. The **Build your panel** dialog opens.
 
-3. Enter a **Panel name** — choose something descriptive so you can identify it quickly from your panels list (e.g. "Female Entrepreneurs in Accra", "Enterprise Admins").
+3. Enter a **Panel Name** — be specific so you can identify it at a glance (e.g. "Female Entrepreneurs in Accra", "Kuda Mobile Users").
 
-4. Choose how you'd like to source your participants. Peppermint offers three methods:
-   - **Find and vet new testers** — build your pool by setting up custom screener questions
-   - **From existing panels** — select participants from previous studies or saved panels
-   - **Import your own contacts** — invite your customers or external contact lists directly
+4. Choose how you'd like to source your participants:
+   - **Recruit new participants** — click **Set screener** to build custom questions that vet your tester pool before they join
+   - **Use an existing panel** — use the **Select panel** dropdown to pull participants from a previous study or saved panel
+   - **Bring your own participants** — invite your own customers or external contacts directly to Peppermint *(Coming Soon — click **Notify me** to be alerted when it launches)*
 
-5. Click **Continue** to proceed with your chosen sourcing method.
+5. Click **Continue**.
 
-   ![The Create panel screen showing the panel name field and participant sourcing options](/src/assets/docs/panels/step-5-create-panel.png)
+   ![The Build your panel dialog showing the Panel Name field and three participant sourcing options](/src/assets/docs/panels/step-2-build-panel.png)
 
-Your new panel appears in your panels list and is ready to receive participants.
+6. If you chose **Recruit new participants**, you'll be taken to the screener builder. Add your questions, then click **Next: Review & Publish**.
+
+7. Review your screener in the preview panel, then click **Create Panel** to publish.
 
 ### Viewing Your Panels
 
-1. From the main navigation, click **Panels**.
+1. Click **Panels** in the left navigation.
 
-2. You'll see a list of all your panels, each showing the panel name, number of members, and when it was last updated.
+2. Your panels are listed with each panel's name, participant count, screener question count, date created, and last updated date.
 
-3. Click any panel to open it and view its members.
+   ![The Panels list showing panel names, participant counts, screener counts, and dates](/src/assets/docs/panels/step-3-view-panels.png)
 
-   ![The Panels list view showing panel cards with member counts and last-updated dates](/src/assets/docs/panels/step-3-view-panels.png)
-
-4. Inside a panel, you can see each participant's name, contact details, and any past study activity.
+3. Click a panel name to open it. Inside, you'll see a **Qualified respondents** table showing each participant's name, age, profession, education, income, household status, and date joined.
 
 ## Key Actions
 
-- **Create panel** — Start a new named group of participants.
-- **View panel** — Open a panel to see its members and participant details.
-- **Add participants** — Add new or existing participants to a panel.
-- **Remove participant** — Remove a participant from a panel without deleting them from your workspace.
-- **Rename panel** — Update a panel's name or description at any time.
-- **Delete panel** — Permanently remove a panel and disassociate its members (participants are not deleted).
+- **+ Create** — Start a new panel and choose how to source participants.
+- **Set screener** — Build custom screening questions to qualify new participants before they join the panel.
+- **Select panel** — Pull participants from a previous study or saved panel when creating a new one.
+- **Export** — Export panel data for use outside Peppermint.
+- **Remove** — Remove a respondent from a panel without deleting them from your workspace.
+- **Customize** — Choose which columns appear in the panels list or respondents table.
 
 ## Tips & Best Practices
 
-- Name panels by segment or behaviour, not by study — panels are meant to be reused, so study-specific names will become confusing over time.
-- Keep panels focused. A panel of 20 highly relevant participants is more useful than one with 200 loosely matched ones.
-- Review panel membership before each study to make sure participant details are still current.
-- Use descriptions to document the criteria you used when building the panel, so colleagues know who belongs in it.
+- Name panels by participant segment, not by study — panels are reusable, so study-specific names become confusing over time.
+- Add a "None of the above" option to screener questions so participants who don't fit aren't forced to pick an incorrect answer (Peppermint surfaces this as a best practice in the screener builder).
+- Check the **Screener** column in the panels list before selecting a panel for a study — it shows how many questions are filtering your pool so you know how tightly qualified respondents are.
+- Recruit more participants than you need to account for drop-off — a larger qualified pool gives you flexibility when scheduling sessions.
 
 ## What Happens Next
 
-Once your panel is set up, you can use it when recruiting participants for a study. When you launch or set up a study in Peppermint, you'll be able to select an existing panel as your participant source rather than building a list from scratch.
+Once your panel is published, you can use it as a participant source when setting up a study in Peppermint. Your panel will appear as a selectable option, so you can get the right respondents without rebuilding your list each time.
 
 See also: [Running a Study](/features/running-a-study)
 
 ## FAQs & Common Issues
 
-**Q: Can I add a participant to more than one panel?**  
-A: Yes — a participant can belong to multiple panels. Adding them to a new panel won't remove them from existing ones.
+**Q: What's the difference between "Recruit new participants" and "Use an existing panel"?**  
+A: Recruit new participants lets you define screener questions to find and qualify a fresh pool of testers. Use an existing panel pulls from respondents you've already vetted in a previous study or saved panel.
 
-**Q: What happens to my studies if I delete a panel?**  
-A: Deleting a panel doesn't affect studies that have already used it. Past study data is preserved. Only future recruitment from that panel is affected.
+**Q: Can I change the sourcing method after creating a panel?**  
+A: No — the sourcing method is set when the panel is created. If you need a different source, create a new panel with the updated approach.
 
-**Q: Can I rename a panel after creating it?**  
-A: Yes — open the panel and use the rename option. The updated name applies immediately across your workspace.
-
-**Q: Is there a limit to how many participants a panel can hold?**  
-A: There's no hard limit on panel size, but for best results keep panels focused on a clearly defined segment.
+**Q: When will "Bring your own participants" be available?**  
+A: This option is marked as Coming Soon. Click **Notify me** in the **Build your panel** dialog to be alerted when it launches.
 
 **Q: Can my teammates see and use my panels?**  
-A: Yes — panels are shared across your Peppermint workspace, so any team member with access can view and recruit from them.
+A: Yes — panels are shared across your Peppermint workspace. Any team member can view, recruit from, or export them.
+
+**Q: What does the participant count in the panels list show?**  
+A: It shows the number of qualified respondents currently in the panel — participants who passed all screener questions.

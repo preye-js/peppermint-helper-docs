@@ -20,13 +20,16 @@ Panels are saved groups of research participants that you can recruit from when 
 
 2. Click **Create panel**.
 
-3. Enter a **Panel name** — choose something descriptive so you can identify it quickly from your panels list (e.g. "Power Users – iOS", "Enterprise Admins").
+3. Enter a **Panel name** — choose something descriptive so you can identify it quickly from your panels list (e.g. "Female Entrepreneurs in Accra", "Enterprise Admins").
 
-4. Optionally, add a **Description** to capture who this panel is for or what studies it supports.
+4. Choose how you'd like to source your participants. Peppermint offers three methods:
+   - **Find and vet new testers** — build your pool by setting up custom screener questions
+   - **From existing panels** — select participants from previous studies or saved panels
+   - **Import your own contacts** — invite your customers or external contact lists directly
 
-5. Click **Create** to save your panel.
+5. Click **Continue** to proceed with your chosen sourcing method.
 
-   ![The Create Panel screen showing the panel name field and Create button](/src/assets/docs/panels/step-5-create-panel.png)
+   ![The Create panel screen showing the panel name field and participant sourcing options](/src/assets/docs/panels/step-5-create-panel.png)
 
 Your new panel appears in your panels list and is ready to receive participants.
 

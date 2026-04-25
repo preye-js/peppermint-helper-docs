@@ -129,3 +129,22 @@ mobile-starlight-toc .dropdown > ul > li:first-child {
   height: 1.8rem;
   width: auto;
 }
+
+/* Light mode (including pre-hydration): prevent purple flash on refresh. */
+:root:not([data-theme='dark']) sl-sidebar-state-persist [aria-current='page'],
+:root:not([data-theme='dark']) sl-sidebar-state-persist [aria-current='page']:hover,
+:root:not([data-theme='dark']) sl-sidebar-state-persist [aria-current='page']:focus,
+:root[data-theme='light'] sl-sidebar-state-persist [aria-current='page'],
+:root[data-theme='light'] sl-sidebar-state-persist [aria-current='page']:hover,
+:root[data-theme='light'] sl-sidebar-state-persist [aria-current='page']:focus {
+  background-color: #f7f8f9;
+  color: var(--app-text);
+}
+
+/* Dark mode active sidebar item. */
+:root[data-theme='dark'] sl-sidebar-state-persist [aria-current='page'],
+:root[data-theme='dark'] sl-sidebar-state-persist [aria-current='page']:hover,
+:root[data-theme='dark'] sl-sidebar-state-persist [aria-current='page']:focus {
+  background-color: var(--app-hover);
+  color: var(--app-text);
+}

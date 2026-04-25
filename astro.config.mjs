@@ -8,7 +8,8 @@ export default defineConfig({
 		starlight({
 			title: 'My Docs',
 			logo: {
-				src: '/src/assets/peppermint-logo.svg',
+				light: '/src/assets/peppermint-logo.svg',
+				dark: '/src/assets/peppermint-logo-dark.svg',
 				alt: 'Peppermint',
 				replacesTitle: true,
 			},

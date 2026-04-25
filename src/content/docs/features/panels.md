@@ -31,7 +31,7 @@ Panels are saved groups of research participants that you build once and reuse a
 
 5. Click **Continue**.
 
-   ![The Build your panel dialog showing the Panel Name field and the three participant sourcing options](/src/assets/docs/panels/step-2-build-panel.png)
+   ![The Build your panel dialog showing the Panel Name field and the three participant sourcing options](/docs/panels/step-2-build-panel.png)
 
 6. If you chose **Recruit new participants**, you'll move to the screener builder. Add your questions using **Single Select** or **Multi-Select** question types, then click **Next: Review & Publish**.
 
@@ -47,7 +47,7 @@ Your panel is added to the Panels list. Participants who meet your screener crit
 
 2. Your panels are listed with each panel's name, participant count, screener question count, date created, and last updated date.
 
-   ![The Panels list showing panel names, participant counts, screener details, and creation dates](/src/assets/docs/panels/step-3-panels-list.png)
+   ![The Panels list showing panel names, participant counts, screener details, and creation dates](/docs/panels/step-3-panels-list.png)
 
 3. Click a panel name to open it. Inside, you'll see the **Qualified respondents** table showing each participant's name, age, profession, education, income, household status, and date joined.
 

@@ -1,9 +1,13 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+	vite: {
+		plugins: [tailwindcss()],
+	},
 	integrations: [
 		starlight({
 			title: 'My Docs',
@@ -13,7 +17,7 @@ export default defineConfig({
 				alt: 'Peppermint',
 				replacesTitle: true,
 			},
-			customCss: ['./src/styles/starlight-overrides.css'],
+			customCss: ['./src/styles/tailwind.css', './src/styles/starlight-overrides.css'],
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{

@@ -4,11 +4,17 @@
   --app-surface: #ffffff;
   --app-surface-2: #f7f8f9;
   --app-sidebar-bg: #fdfefe;
+  --app-image-bg: #f6f5ed;
   --app-border: #e3e8ee;
+  --app-border-light: #EDEEF0;
   --app-border-strong: #d5dbe1;
-  --app-text: #1a1f36;
+  --app-border-explore: #817BFB1F;
+  --app-border-homepage-image: #D9D9D980;
+  --app-text: #141232;
   --app-text-muted: #4f566b;
-  --app-text-subtle: #697386;
+  --app-text-subtle: #344054;
+  --app-text-link: #727889;
+  --app-text-footer: #B9BBC4;
   --app-hover: #f7f8f9;
   --app-hover-alt: #f5f7ff;
   --app-primary: #625afa;
@@ -21,6 +27,7 @@
   --app-danger-light: #ffe5e5;
   --app-danger: #c53030;
   --app-overlay: rgba(237, 238, 240, 0.5);
+
 
   /* Starlight mapping (light) */
   --sl-color-black: var(--app-bg);
@@ -77,6 +84,7 @@
   --app-danger-light: #4d2a2a;
   --app-danger: #ff8b8b;
   --app-overlay: rgba(0, 0, 0, 0.5);
+  --app-image-bg: #f6f5ed;
 
   /* Starlight mapping (dark) */
   --sl-color-black: var(--app-bg);
@@ -148,3 +156,48 @@ mobile-starlight-toc .dropdown > ul > li:first-child {
   background-color: var(--app-hover);
   color: var(--app-text);
 }
+
+/*
+ * Homepage: widen the article column — set Starlight sizing vars ONLY on `main`.
+ * Vars on `html` break `.header`'s CSS grid (`--sl-content-width` is used to size the logo slot).
+ */
+main[data-pagefind-body]:has(.home-page) {
+  --sl-content-width: 100%;
+  --sl-content-pad-x: 0;
+  --sl-main-pad: 0;
+}
+
+main > .content-panel:has(.home-page) {
+  padding-inline: 0 !important;
+  padding-block-end: 0 !important;
+}
+
+main[data-pagefind-body]:has(.home-page) > .content-panel {
+  padding-block-end: 0 !important;
+  margin-block-end: 0 !important;
+}
+
+/* Hide Starlight's built-in footer (EditLink, Pagination) on the home page */
+main[data-pagefind-body]:has(.home-page) footer.sl-flex {
+  display: none !important;
+}
+
+/* Home page: hide default Starlight title panel and divider. */
+main > .content-panel:has(> .sl-container > h1#_top) {
+  display: none;
+}
+
+main > .content-panel:has(> .sl-container > h1#_top) + .content-panel {
+  border-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Home page: remove default Starlight container horizontal spacing. */
+main > .content-panel:has(.home-page) > .sl-container {
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+
+

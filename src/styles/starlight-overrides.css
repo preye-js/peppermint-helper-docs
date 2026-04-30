@@ -246,6 +246,11 @@ main[data-pagefind-body]:has(.home-page) > .content-panel {
   margin-block-end: 0 !important;
 }
 
+main[data-pagefind-body] .home-page {
+  width: min(100%, 1728px);
+  margin-inline: auto !important;
+}
+
 /* Hide Starlight's built-in footer (EditLink, Pagination) on the home page */
 main[data-pagefind-body]:has(.home-page) footer.sl-flex {
   display: none !important;

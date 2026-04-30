@@ -11,6 +11,9 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'My Docs',
+			components: {
+				Header: './src/components/Header.astro',
+			},
 			logo: {
 				light: '/src/assets/peppermint-logo.svg',
 				dark: '/src/assets/peppermint-logo-dark.svg',

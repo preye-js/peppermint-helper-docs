@@ -1,0 +1,86 @@
+---
+import config from 'virtual:starlight/user-config';
+import Search from 'virtual:starlight/components/Search';
+import { Moon, Sparkle, SunMedium } from '@lucide/astro';
+import peppermintLogoDark from '../assets/peppermint-logo-dark.svg';
+
+const shouldRenderSearch =
+  config.pagefind || config.components.Search !== '@astrojs/starlight/components/Search.astro';
+---
+
+<div class="flex h-21 w-full items-center justify-between">
+  <div class="flex min-w-0 items-center gap-5 overflow-clip">
+    <a href="/" class="shrink-0" aria-label="Peppermint home">
+      <img src="/peppermint-logo.svg" alt="Peppermint" class="header-wordmark header-wordmark--light h-10 w-auto" />
+      <img src={peppermintLogoDark.src} alt="Peppermint" class="header-wordmark header-wordmark--dark h-10 w-auto" />
+    </a>
+    <a href="/" class="whitespace-nowrap text-[15px] leading-[23px] font-medium text-(--app-primary) bg-(--app-primary-light) no-underline rounded-sm flex gap-0.5 justify-center items-center py-px pl-1.5 pr-1"><Sparkle stroke-width={1.6} fill="currentColor" class="w-2.5 h-2.5" /> Help</a>
+  </div>
+  <div class="sl-flex max-w-xl flex-1 print:hidden">
+    {shouldRenderSearch && <Search />}
+  </div>
+  <div class="sl-hidden items-center gap-5 print:hidden md:sl-flex">
+    <button
+      id="theme-toggle"
+      type="button"
+      aria-label="Toggle theme"
+      title="Toggle theme"
+    >
+      <SunMedium id="theme-icon-light" stroke-width={1.6} class="h-6 w-6" />
+      <Moon id="theme-icon-dark" stroke-width={1.6} class="hidden h-6 w-6" />
+    </button>
+    <a
+      href="https://www.runpeppermint.com/dashboard"
+      class="inline-flex items-center text-white text-[16px] leading-[24px] font-medium whitespace-nowrap rounded-sm border border-(--app-primary) bg-(--app-primary) px-4 py-2 no-underline cursor-pointer transition-colors duration-150 hover:bg-(--app-primary-hover) [box-shadow:0px_1px_1px_0px_var(--app-button-shadow-1),0px_2px_5px_0px_var(--app-button-shadow-2),inset_0px_-1px_1px_0px_var(--app-button-shadow-inset)]"
+    >
+      Go to Dashboard
+    </a>
+  </div>
+</div>
+
+<script is:inline>
+  const storageKey = 'starlight-theme';
+  const prefersLight = matchMedia('(prefers-color-scheme: light)');
+
+  const getPreferredColorScheme = () => (prefersLight.matches ? 'light' : 'dark');
+  const parseTheme = (theme) => (theme === 'dark' || theme === 'light' || theme === 'auto' ? theme : 'auto');
+  const loadTheme = () => parseTheme(localStorage.getItem(storageKey));
+  const appliedTheme = () => {
+    const theme = loadTheme();
+    return theme === 'auto' ? getPreferredColorScheme() : theme;
+  };
+
+  const lightIcon = document.getElementById('theme-icon-light');
+  const darkIcon = document.getElementById('theme-icon-dark');
+  const toggle = document.getElementById('theme-toggle');
+  const header = document.querySelector('.page > .header');
+
+  const syncIcons = (theme) => {
+    lightIcon?.classList.toggle('hidden', theme === 'dark');
+    darkIcon?.classList.toggle('hidden', theme !== 'dark');
+  };
+
+  const applyTheme = (theme) => {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem(storageKey, theme);
+    window.StarlightThemeProvider?.updatePickers(theme);
+    syncIcons(theme);
+  };
+
+  const initialTheme = appliedTheme();
+  document.documentElement.dataset.theme = initialTheme;
+  syncIcons(initialTheme);
+
+  toggle?.addEventListener('click', () => {
+    const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    applyTheme(nextTheme);
+  });
+
+  const syncScrolledHeader = () => {
+    header?.classList.toggle('is-scrolled', window.scrollY > 0);
+  };
+
+  syncScrolledHeader();
+  window.addEventListener('scroll', syncScrolledHeader, { passive: true });
+</script>
+

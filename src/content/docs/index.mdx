@@ -1,40 +1,132 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
-hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+title: Help Centre
+description: Everything you need to master our platform and get your research running.
+template: splash
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { ArrowUpRight, ArrowRight, User, Rocket, Sparkles, Scale, Workflow, Presentation } from '@lucide/astro';
 
-## Next steps
+export const exploreItems = [
+  { Icon: User,         title: 'Your Account',      desc: 'Manage your workspace, billing, and team access.' },
+  { Icon: Rocket,       title: 'Getting Started',   desc: 'Learn how to set up your workspace and start your first research project in minutes.' },
+  { Icon: Sparkles,     title: 'Discover Features', desc: 'Explore our tools for recruitment, study management, and automated research.' },
+  { Icon: Scale,        title: 'Compare',            desc: 'See which tools are available on each plan and compare models to find the right fit.' },
+  { Icon: Workflow,     title: 'Integrations',       desc: 'Connect Peppermint with Slack, Figma, and Google to automate your workflow.' },
+  { Icon: Presentation, title: 'Schedule Demo',      desc: 'See how Peppermint scales your research. Book a live walkthrough with our team.' },
+];
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
-</CardGrid>
+export const helpItems = [
+  { title: 'FAQs',             desc: 'Answers to questions on features, pricing, and everything else.', strokeWidth: undefined },
+  { title: 'Contact Support',  desc: 'Get direct help from our support team.',                          strokeWidth: 1.6 },
+];
+
+export const footerNav = [
+  { heading: 'Get started', links: [{ label: 'How Peppermint Works', href: '#' }, { label: 'Pricing', href: '#' }, { label: 'Schedule a demo', href: '#' }] },
+  { heading: 'Company',     links: [{ label: 'Features', href: '#' }, { label: 'Impact', href: '#' }, { label: 'Compare', href: '#' }] },
+  { heading: 'Learn',       links: [{ label: 'Blog', href: '#' }, { label: 'Customers', href: '#' }, { label: 'Help Centre', href: '#' }] },
+  { heading: 'Legal',       links: [{ label: 'Privacy', href: '#' }, { label: 'Terms', href: '#' }, { label: 'GDPR Compliance', href: '#' }] },
+];
+
+<div class="home-page not-content text-(--app-text)">
+  <section class="px-32 pt-24 pb-12">
+  <div class="px-12 space-y-15!">
+  <div class="grid gap-6!">
+    <h1 class="font-['Bricolage_Grotesque'] text-[3rem]! font-medium! leading-[56px]!">Help Centre</h1>
+    <div class="text-(--app-text-subtle) text-[1.1875rem] font-normal leading-[28px]">
+      Everything you need to master our platform and get your research running. <br />
+      Can&apos;t find an answer? Reach out to our <a class="text-(--app-primary) cursor-pointer" href="mailto:info@runpeppermint.com">support team</a>.
+    </div>
+  </div>
+    <div class="w-full h-100 min-[1589px]:h-105 min-[1672px]:h-121 flex gap-10">
+    <div class="relative overflow-hidden bg-(--app-image-bg) h-full min-w-[800px] min-[1589px]:min-w-[850px] min-[1672px]:min-w-[982px] rounded-lg border border-(--app-border-explore)">
+      <div class="h-[442px] absolute top-[85px] left-[70px] right-[70px] w-[643px] min-[1589px]:w-[693px] min-[1672px]:w-[825px] overflow-hidden rounded-t-[12px] border-t border-l border-r border-(--app-border-homepage-image)">
+        <img class="block w-full" src="/recruit.webp" alt="Peppermint dashboard preview" loading="eager" />
+      </div>
+    </div>
+    <div class="text-(--app-text-subtle) text-[1.125rem] font-normal leading-[28px]">
+        Providing the research infrastructure for enterprises to access and
+        understand the market at scale.
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="px-32 pt-24 pb-12">
+  <div class="space-y-15! px-12">
+    <h2 class="text-[1.75rem]! font-medium! font-['Bricolage_Grotesque'] leading-9!">Explore</h2>
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+      {exploreItems.map(({ Icon, title, desc }) => (
+        <article class="max-w-[432px] rounded-lg border border-(--app-border-explore) bg-(--app-surface-2) hover:border-(--app-image-bg) hover:bg-(--app-image-bg) pl-6 pr-12 py-6 group">
+          <div class="h-49! flex flex-col justify-between">
+            <div>
+              <Icon strokeWidth={1.6} className="w-6 h-6 group-hover:text-(--app-primary)" />
+            </div>
+            <div class="space-y-4!">
+              <h3 class="text-[1.125rem]! font-semibold! font-['Bricolage_Grotesque'] leading-6! text-(--app-text)">{title}</h3>
+              <div class="text-[1.125rem]! font-normal! leading-[28px]! text-(--app-text-subtle)">{desc}</div>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+    </div>
+  </section>
+
+  <section class="px-32 py-24">
+  <div class="space-y-15! px-12">
+    <h2 class="text-[1.75rem]! font-medium! font-['Bricolage_Grotesque'] leading-9!">Need help?</h2>
+    <div class="h-[122px] grid gap-[40px] md:grid-cols-2">
+      {helpItems.map(({ title, desc, strokeWidth }) => (
+        <article class="rounded-lg border border-(--app-border-light) p-6 space-y-[10px]! group">
+          <div class="flex items-center justify-between">
+            <h3 class="text-[1.125rem]! font-semibold! font-['Bricolage_Grotesque'] leading-6! text-(--app-text)">{title}</h3>
+            <ArrowUpRight {...(strokeWidth ? { strokeWidth } : {})} class="w-6 h-6 group-hover:text-(--app-primary)" />
+          </div>
+          <p class="text-[1.125rem]! font-normal! leading-[28px]! text-(--app-text-subtle)">{desc}</p>
+        </article>
+      ))}
+    </div>
+    </div>
+  </section>
+
+  <footer class="w-full px-32 pt-24 pb-32">
+  <div class="w-full flex gap-15 items-start px-12">
+    <div class="w-[418.67px]! space-y-4!">
+    <img src="/peppermint-logo-without-wordmark.svg" alt="Peppermint logo" class="h-8 w-auto" />
+      <div class="text-(--app-text-subtle) text-[1.125rem]! font-normal! leading-[28px]!">
+        We&apos;ve delivered thousands of insights for global builders and market-leading
+        enterprises, all while maintaining a 98% data integrity rate.
+      </div>
+      <div class="flex items-center gap-2 group">
+      <a class="text-(--app-text) group-hover:text-(--app-text-link) text-[1.125rem]! font-normal! leading-[28px]! no-underline" href="#">Start your discovery</a>
+      <ArrowRight strokeWidth={1.6} class="w-6 h-6 group-hover:text-(--app-primary)" />
+      </div>
+      <div class="text-(--app-text-footer) text-[1.125rem]! font-normal! leading-[24px]!">
+      © 2026 Peppermint Group
+      </div>
+    </div>
+    <div class="flex-1 space-y-12!">
+      {footerNav.reduce((rows, col, i) => {
+        if (i % 2 === 0) rows.push([]);
+        rows[rows.length - 1].push(col);
+        return rows;
+      }, []).map((row) => (
+        <div class="grid grid-cols-3 gap-15">
+          <div></div>
+          {row.map(({ heading, links }) => (
+            <div class="space-y-2!">
+              <h3 class="text-[1.125rem]! font-semibold! font-['Bricolage_Grotesque'] leading-6! text-(--app-text-footer)">{heading}</h3>
+              {links.map(({ label, href }) => (
+                <div class="flex items-center gap-2 group">
+                  <a class="text-(--app-text) group-hover:text-(--app-text-link) text-[1.125rem]! font-normal! leading-[28px]! no-underline" href={href}>{label}</a>
+                  <ArrowRight strokeWidth={1.6} class="w-6 h-6 hidden group-hover:block group-hover:text-(--app-primary)" />
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+    </div>
+  </footer>
+</div>

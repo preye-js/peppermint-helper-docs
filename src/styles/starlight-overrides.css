@@ -1,9 +1,13 @@
 :root {
+  --sl-nav-pad-x: 0;
+  --sl-nav-pad-y: 0;
+
   /* Brand tokens (light) */
   --app-bg: #ffffff;
   --app-surface: #ffffff;
   --app-surface-2: #f7f8f9;
   --app-sidebar-bg: #fdfefe;
+  --app-navbar-bg: #F7F8F980;
   --app-image-bg: #f6f5ed;
   --app-border: #e3e8ee;
   --app-border-light: #EDEEF0;
@@ -20,6 +24,9 @@
   --app-primary: #625afa;
   --app-primary-hover: #544cf4;
   --app-primary-light: #efefff;
+  --app-button-shadow-1: color-mix(in srgb, var(--app-text) 8%, transparent);
+  --app-button-shadow-2: color-mix(in srgb, var(--app-text-subtle) 12%, transparent);
+  --app-button-shadow-inset: color-mix(in srgb, var(--app-text) 12%, transparent);
   --app-success-light: #4fc22633;
   --app-success: #4fc226;
   --app-warning-light: #f8e5ba;
@@ -77,6 +84,9 @@
   --app-primary: #7a73ff;
   --app-primary-hover: #8b85ff;
   --app-primary-light: #141232;
+  --app-button-shadow-1: color-mix(in srgb, var(--app-text) 8%, transparent);
+  --app-button-shadow-2: color-mix(in srgb, var(--app-text-subtle) 12%, transparent);
+  --app-button-shadow-inset: color-mix(in srgb, var(--app-text) 12%, transparent);
   --app-success-light: #314728;
   --app-success: #8cdd6b;
   --app-warning-light: #4b3620;
@@ -157,6 +167,46 @@ mobile-starlight-toc .dropdown > ul > li:first-child {
   color: var(--app-text);
 }
 
+/* Custom header: remove default Starlight navbar divider/outline traces. */
+.page > .header {
+  height: 84px !important;
+  padding: 0 128px !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  background-color: var(--app-surface) !important;
+  position: sticky !important;
+  top: 0;
+  isolation: isolate;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: background-color 150ms ease;
+}
+
+.page > .header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  transition: opacity 150ms ease;
+}
+
+.page > .header.is-scrolled {
+  background-color: var(--app-navbar-bg) !important;
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+}
+
+.page > .header.is-scrolled::before {
+  opacity: 1;
+}
+
 /*
  * Homepage: widen the article column — set Starlight sizing vars ONLY on `main`.
  * Vars on `html` break `.header`'s CSS grid (`--sl-content-width` is used to size the logo slot).
@@ -165,6 +215,11 @@ main[data-pagefind-body]:has(.home-page) {
   --sl-content-width: 100%;
   --sl-content-pad-x: 0;
   --sl-main-pad: 0;
+}
+
+/* Sticky header: remove fixed-header top offset on home page. */
+:root:has(main[data-pagefind-body] .home-page) .page > .main-frame {
+  padding-top: 0 !important;
 }
 
 main > .content-panel:has(.home-page) {

@@ -23,14 +23,6 @@ If anything here conflicts with `git-flow.mdc`, **`git-flow.mdc` wins.**
 
 ## Workflow (execute in order)
 
-0. **Always start from updated `staging`**
-   - If current branch is **not** `staging`, immediately switch first:
-     - `git checkout staging`
-   - Then always sync it before continuing:
-     - `git fetch origin`
-     - `git pull origin staging`
-   - Continue the rest of this workflow from that updated baseline.
-
 1. **Inspect state**
    - `git status`, `git branch -vv`, confirm what is uncommitted and which branch you are on.
    - If there are unrelated changes mixed with the feature, stop and **split commits** or **stash** only with user direction-prefer separate logical commits (never one unrelated megacommit).

@@ -25,6 +25,7 @@ You can view your current credit quota and past invoice history at any time on t
 ### View your current plan
 
 1. Go to **Settings → Plans & Billing**.
+
 2. Your current plan, renewal date (if applicable), and remaining credit usage are displayed at the top of the dashboard.
 
 Visit [Pricing](https://runpeppermint.com/pricing) to compare plan tiers, test capabilities, features, and team seats.
@@ -34,8 +35,11 @@ Visit [Pricing](https://runpeppermint.com/pricing) to compare plan tiers, test c
 You can upgrade your subscription at any time. Any unused quota from your previous plan rolls over immediately to your new tier. Unused credits at the end of the month carry over to the next month, up to a maximum of two months' worth of credits.
 
 1. Go to **Settings → Plans & Billing**.
+
 2. Click **Upgrade** or **compare all plans**.
+
 3. Select your preferred plan.
+
 4. Confirm your payment details and confirm the upgrade.
 
 Changes take effect immediately.
@@ -43,13 +47,17 @@ Changes take effect immediately.
 ### View invoices and receipts
 
 1. Go to **Settings → Plans & Billing**.
+
 2. Your billing history is listed with the description, date, amount, and status of each charge.
+
 3. Click **View receipt** next to any invoice.
 
 ### Update your payment method
 
 1. Go to **Settings → Plans & Billing**.
+
 2. Under the **Payment** section, click **Add Payment Method**.
+
 3. Enter your new card details and confirm.
 
 Supported payment methods include credit/debit cards and bank transfers.

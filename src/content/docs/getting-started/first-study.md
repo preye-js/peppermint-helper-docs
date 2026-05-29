@@ -1,6 +1,8 @@
 ---
 title: Run Your First Study
 description: A step-by-step guide to setting up and launching your first Peppermint study — from creating tasks and targeting participants to reviewing results and sharing reports.
+sidebar:
+  order: 3
 ---
 
 ## Overview
@@ -19,8 +21,11 @@ Whether you're a solo researcher running quick, ad-hoc interviews or a product t
 ### Step 1: Create a study
 
 1. From your dashboard, click **Run Study**.
+
 2. Select your study methodology: **Survey**, **Usability Test**, or **Interview**.
+
 3. Enter an internal **Title** and **Description**.
+
 4. Click **Continue**.
 
 :::tip
@@ -44,7 +49,9 @@ Multiple team members can collaborate on your draft script. If you cannot see co
 ### Step 3: Target your audience
 
 1. Navigate to the **Participant** tab within your study creator.
+
 2. Use the **Audience Filters** to define your ideal user profile. You can filter across 14 distinct criteria — including age range, location, gender, device type, professional background, income, and educational level.
+
 3. Enter the total number of participants required for the study.
 
 ### Step 4: Check costs and top up your Mint balance
@@ -52,12 +59,17 @@ Multiple team members can collaborate on your draft script. If you cannot see co
 Peppermint studies are fully prepaid using **Mints**. The cost is calculated dynamically based on your study type and participant count.
 
 **To review your estimated cost:**
+
 1. Complete Steps 1–3 and save your study as a **Draft**.
+
 2. Navigate to the **Review & Publish** tab to view the calculated Mint cost.
 
 **To top up your Mint balance:**
+
 1. Navigate to Home, then click your workspace name in the upper navigation to open the account dropdown.
+
 2. Select **Mints**.
+
 3. Enter the number of Mints you wish to purchase, select your preferred currency, and click **Pay with Debit Card**.
 
 Your Mint balance updates immediately upon a successful transaction.
@@ -65,7 +77,9 @@ Your Mint balance updates immediately upon a successful transaction.
 ### Step 5: Launch your study
 
 1. Return to your draft study and open the **Review & Publish** tab.
+
 2. Do a final review of your study configuration and target audience.
+
 3. Click **Publish**.
 
 Peppermint will instantly screen, match, and notify eligible participants within our research network. Most studies begin collecting responses within a few minutes.

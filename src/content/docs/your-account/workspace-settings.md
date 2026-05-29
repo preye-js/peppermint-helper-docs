@@ -23,8 +23,11 @@ Your workspace is the central hub for your team's research in Peppermint. It is 
 ### Change your workspace name
 
 1. Go to **Settings** in the navigation sidebar.
+
 2. Under **Company**, select **Company**.
+
 3. In the **Company details** field, enter a new name.
+
 4. Click **Update**.
 
 Your workspace name is visible to all team members and appears in shared report links.
@@ -32,8 +35,11 @@ Your workspace name is visible to all team members and appears in shared report 
 ### Change your workspace logo or icon
 
 1. Go to **Settings → Company**.
+
 2. Under **Company logo**, click **edit**.
+
 3. Upload an image file. Supported formats: `.png`, `.jpeg`, `.webp`.
+
 4. Click **Update**.
 
 ### Delete your account
@@ -43,7 +49,9 @@ Your account will be deleted, but your workspace — including all studies, test
 :::
 
 1. Go to **Settings → Company**.
+
 2. Select **Delete account**.
+
 3. Enter your password to confirm deletion.
 
 ## Key Actions

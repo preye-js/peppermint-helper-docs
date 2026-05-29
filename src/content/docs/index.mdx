@@ -7,12 +7,12 @@ template: splash
 import { ArrowUpRight, ArrowRight, User, Rocket, Sparkles, Scale, Workflow, Presentation } from '@lucide/astro';
 
 export const exploreItems = [
-  { Icon: User,         title: 'Your Account',      desc: 'Manage your workspace, billing, and team access.' },
-  { Icon: Rocket,       title: 'Getting Started',   desc: 'Learn how to set up your workspace and start your first research project in minutes.' },
-  { Icon: Sparkles,     title: 'Discover Features', desc: 'Explore our tools for recruitment, study management, and automated research.' },
-  { Icon: Scale,        title: 'Compare',            desc: 'See which tools are available on each plan and compare models to find the right fit.' },
-  { Icon: Workflow,     title: 'Integrations',       desc: 'Connect Peppermint with Slack, Figma, and Google to automate your workflow.' },
-  { Icon: Presentation, title: 'Schedule Demo',      desc: 'See how Peppermint scales your research. Book a live walkthrough with our team.' },
+  { Icon: User,         title: 'Your Account',      desc: 'Manage your workspace, billing, and team access.',                                      href: '/your-account/billing' },
+  { Icon: Rocket,       title: 'Getting Started',   desc: 'Learn how to set up your workspace and start your first research project in minutes.',   href: '/getting-started/what-is-peppermint/' },
+  { Icon: Sparkles,     title: 'Discover Features', desc: 'Explore our tools for recruitment, study management, and automated research.',           href: '/features/panels/' },
+  { Icon: Scale,        title: 'Compare',            desc: 'See which tools are available on each plan and compare models to find the right fit.',  href: '#' },
+  { Icon: Workflow,     title: 'Integrations',       desc: 'Connect Peppermint with Slack, Figma, and Google to automate your workflow.',           href: '#' },
+  { Icon: Presentation, title: 'Schedule Demo',      desc: 'See how Peppermint scales your research. Book a live walkthrough with our team.',       href: 'https://peppermint.youcanbook.me/' },
 ];
 
 export const helpItems = [
@@ -55,8 +55,8 @@ export const footerNav = [
   <div class="space-y-15! px-12">
     <h2 class="text-[1.75rem]! font-medium! font-['Bricolage_Grotesque'] leading-9!">Explore</h2>
     <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-      {exploreItems.map(({ Icon, title, desc }) => (
-        <article class="max-w-[432px] rounded-lg border border-(--app-border-explore) bg-(--app-surface-2) hover:border-(--app-image-bg) hover:bg-(--app-image-bg) pl-6 pr-12 py-6 group">
+      {exploreItems.map(({ Icon, title, desc, href }) => (
+        <a href={href} class="max-w-[432px] rounded-lg border border-(--app-border-explore) bg-(--app-surface-2) hover:border-(--app-image-bg) hover:bg-(--app-image-bg) pl-6 pr-12 py-6 group no-underline block">
           <div class="h-49! flex flex-col justify-between">
             <div>
               <Icon strokeWidth={1.6} className="w-6 h-6 group-hover:text-(--app-primary)" />
@@ -66,7 +66,7 @@ export const footerNav = [
               <div class="text-[1.125rem]! font-normal! leading-[28px]! text-(--app-text-subtle)">{desc}</div>
             </div>
           </div>
-        </article>
+        </a>
       ))}
     </div>
     </div>

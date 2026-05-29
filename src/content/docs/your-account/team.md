@@ -26,9 +26,13 @@ Peppermint is built for collaborative research. You can invite colleagues to you
 ### Invite a team member
 
 1. Go to **Settings → Team**.
+
 2. Click **Invite**.
+
 3. Enter the email address of the person you want to invite.
+
 4. Select a role for the invitee (see Roles & Permissions above).
+
 5. Click **Send**.
 
 Invitees receive an email prompting them to accept the invitation and set up their account. Invite links remain valid indefinitely and can be revoked before the invitee accepts.
@@ -36,8 +40,11 @@ Invitees receive an email prompting them to accept the invitation and set up the
 ### Change a team member's role
 
 1. Go to **Settings → Team**.
+
 2. Find the team member in the list.
+
 3. Click **Manage** next to their name.
+
 4. Select the new role and update.
 
 ### Transfer workspace ownership
@@ -45,9 +52,13 @@ Invitees receive an email prompting them to accept the invitation and set up the
 Only the current workspace Owner can transfer ownership. You can only transfer to a user who currently holds an **Admin** role. If the intended user is a Member, upgrade their role to Admin first.
 
 1. Go to **Settings → Team**.
+
 2. Find your name (the current Owner) in the list.
+
 3. Click **Transfer** next to your name.
+
 4. Select the Admin you wish to designate as the new owner.
+
 5. Click **Continue** to confirm.
 
 :::note
@@ -57,9 +68,13 @@ The transfer is not immediate. The designated Admin must accept the ownership in
 ### Remove a team member
 
 1. Go to **Settings → Team**.
+
 2. Find the team member you want to remove.
+
 3. Click **Manage** next to their name.
+
 4. Click **Remove** in the modal.
+
 5. Confirm by clicking **Update**.
 
 Removed members immediately lose access to the workspace. Any studies or data they created remain in the workspace.

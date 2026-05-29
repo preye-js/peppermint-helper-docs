@@ -1,6 +1,8 @@
 ---
 title: Set Up Your Workspace
 description: Complete your Peppermint workspace setup — update your name and logo, invite your team, and connect integrations — so you're ready to run your first study.
+sidebar:
+  order: 2
 ---
 
 ## Overview
@@ -19,7 +21,9 @@ When you sign up for Peppermint, a workspace is automatically created for you. T
 In some cases, testers can see the name and logo of the organisation that published the study. Give your workspace a name and logo that reflects your organisation or team — this appears in shared reports and team invitations.
 
 1. Go to **Settings → Company**.
+
 2. Update the **Company name** field or **Company logo**.
+
 3. Click **Update**.
 
 ### Step 2 — Invite your team *(business accounts)*

@@ -35,16 +35,6 @@ export default defineConfig({
 					label: 'Features',
 					autogenerate: { directory: 'features' },
 				},
-				{
-					label: 'Guides',
-					items: [
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
-				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
-				},
 			],
 		}),
 	],

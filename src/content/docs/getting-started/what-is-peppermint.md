@@ -1,6 +1,8 @@
 ---
 title: What is Peppermint?
 description: Peppermint is a user research platform for running usability tests, surveys, and interviews with pre-vetted participants — from research question to usable findings in hours.
+sidebar:
+  order: 1
 ---
 
 ## Overview
